@@ -8,7 +8,7 @@ import axios from 'axios'
 interface propType{
     type:number
     setDrawOpen:Function
-}
+} 
 
 interface record{
     id?:number
@@ -17,7 +17,7 @@ interface record{
     date?:string|null|DateTime
     person?:string
     detail?:string
-    type:string
+    type:number
 }
 
 const DrawerRoot=styled.div`
@@ -75,10 +75,10 @@ const DrawerBox = (prop:propType) => {
         date:DateTime.local(),
         person:"",
         detail:"",
-        type:""
+        type:prop.type
     })
     useEffect(()=>{
-        setRecord({...record,type:prop.type.toString()})
+        setRecord({...record,type:prop.type})
     },[prop.type])
 
   return (
@@ -140,7 +140,7 @@ const DrawerBox = (prop:propType) => {
                        ...record,
                        begin_time:record.begin_time?.toString(),
                        date:record.date?.toString(),
-                       end_time:record.end_time?.toString()
+                       end_time:record.end_time?.toString(),
                    }))
                    .then(({data})=>{
                        let ok= parseInt(data.ok)

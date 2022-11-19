@@ -4,12 +4,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
 import { useMediaQuery } from '@mui/material';
 
 interface propType{
@@ -97,6 +94,7 @@ const ResponsiveAppBar = ({title,setTitle}:propType) => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
               <Button onClick={()=>setTitle(1)} sx={{ my: 2, color: 'white', display: 'block' }}>阅读小组用--六楼公房</Button>
+              <Button onClick={()=>setTitle(2)} sx={{ my: 2, color: 'white', display: 'block' }}>探究小组用--科技楼实验室</Button>
           </Box>
           {Da}
           

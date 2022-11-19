@@ -1,4 +1,4 @@
-import { Button, Modal, Pagination, useMediaQuery, Box, Popper, Checkbox, FormControlLabel } from '@mui/material'
+import { Button, Modal, Pagination, useMediaQuery, Box, Checkbox, FormControlLabel } from '@mui/material'
 import axios from 'axios'
 import { DateTime } from 'luxon'
 import qs from 'qs'
@@ -126,7 +126,7 @@ const Nanami = ({item}:propType) => {
         end_time:"",
         person:"",
         detail:"",
-        type:1
+        type:item
     }])
     const [count,setCount]=useState<number>(0)
     const [open, setOpen] = useState<boolean>(false);
